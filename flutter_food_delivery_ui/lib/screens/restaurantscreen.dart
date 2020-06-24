@@ -39,8 +39,8 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
                   colors: [
                     Colors.black.withOpacity(0.3),
                     Colors.black.withOpacity(0.3),
-                    Colors.black.withOpacity(0.3),
-                    Colors.black.withOpacity(0.3),
+                    Colors.orange.withOpacity(0.3),
+                    Colors.orange.withOpacity(0.3),
                   ],
                 )),
           ),
@@ -108,18 +108,40 @@ class _RestaurantScreenState extends State<RestaurantScreen> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-                    IconButton(
-                        color: Colors.white,
-                        iconSize: 35.0,
-                        icon: Icon(Icons.arrow_back_ios),
-                        onPressed: () {
-                          Navigator.pop(context);
-                        }),
-                    IconButton(
-                        color: Theme.of(context).primaryColor,
-                        iconSize: 35.0,
-                        icon: Icon(Icons.favorite),
-                        onPressed: () {}),
+                    Container(
+                      decoration: BoxDecoration(
+                        boxShadow: [
+                          BoxShadow(
+                          color: Colors.black,
+                          offset: Offset(0, 2),
+                          blurRadius: 35.0,
+                        ),
+                        ],
+                      ),
+                      child: IconButton(
+                          color: Colors.white,
+                          iconSize: 35.0,
+                          icon: Icon(Icons.arrow_back_ios),
+                          onPressed: () {
+                            Navigator.pop(context);
+                          }),
+                    ),
+                    Container(
+                      decoration: BoxDecoration(
+                        boxShadow: [
+                          BoxShadow(
+                          color: Colors.lightBlueAccent[200],
+                          offset: Offset(0, 2),
+                          blurRadius: 25.0,
+                        ),
+                        ],
+                      ),
+                      child: IconButton(
+                          color: Theme.of(context).primaryColor,
+                          iconSize: 35.0,
+                          icon: Icon(Icons.favorite),
+                          onPressed: () {}),
+                    ),
                   ],
                 ),
               ),
